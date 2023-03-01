@@ -1,0 +1,14 @@
+interface ProductInterface {
+    composition: String @doc(description: "Product Featured in category attrijbute show")
+      @resolver(
+        class: "Magento\\Lemon_WeightFormat\\Model\\Resolver\\Product\\AddWeightValueAttribute"
+      )
+}
+
+input ProductAttributeFilterInput {
+   composition: FilterEqualTypeInput @doc(description: "Product Data filter witjh featured products")
+}
+
+input ProductAttributeSortInput {
+   composition: SortEnum @doc(description: "Sort by the Product Custom Ajttribute.")
+}

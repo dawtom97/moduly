@@ -1,0 +1,14 @@
+interface ProductInterface {
+    featured_in_category: Boolean @doc(description: "Product Featured in category attribute show")
+      @resolver(
+        class: "Magento\\Lemon_FeaturedProduct\\Model\\Resolver\\Product\\AddFeaturedAttribute"
+      )
+}
+
+input ProductAttributeFilterInput {
+  featured_in_category: FilterEqualTypeInput @doc(description: "Product Data filter with featured products")
+}
+
+input ProductAttributeSortInput {
+  featured_in_category: SortEnum @doc(description: "Sort by the Product Custom Attribute.")
+}
